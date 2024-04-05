@@ -26,6 +26,11 @@ mongoose.connect(`mongodb+srv://dimpy:${process.env.DB_PASSWORD}@cluster0.glj568
 app.use('/',router);
 app.use('/post',postRoutes);
 
+app.use(express.static(path.join(__dirname, 'dist')))
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'))
+
+}) 
  
 app.listen(port,()=>{
     console.log(`server is running on port ${port}`);

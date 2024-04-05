@@ -35,7 +35,7 @@ export default function ProfilePic({ changeProfile }) {
  const saveImageInDB = (imageUrl) => {
     console.log(imageUrl);
 
-    axios.put('/setImageToDB', {
+    axios.put('http://localhost:8080/setImageToDB', {
         pic: imageUrl,
     }, {
         headers: {

@@ -24,7 +24,7 @@ export default function SignUp() {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    axios.post('/register', userData)
+    axios.post('http://localhost:8080/register', userData)
       .then(response => {
         console.log(response.data);
       }).catch(error => {

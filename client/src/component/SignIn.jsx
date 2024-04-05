@@ -23,7 +23,7 @@ export default function SignIn() {
   }
 
   const onHandleSubmit=(e)=>{
-    axios.post('/login',userData)
+    axios.post('http://localhost:8080/login',userData)
     .then(response=>{
       console.log(response.data);
       const{name,email,id} = jwt_decode(response.data.data);
