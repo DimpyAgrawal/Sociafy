@@ -9,7 +9,7 @@ export default function Home() {
 
   const fetchAllPosts = async (id) => {
     try {
-      const response = await axios.get('/post/allposts', {
+      const response = await axios.get('http://localhost:8080/post/allposts', {
         headers: {
           "Content-Type": 'application/json',
            Authorization: `Bearer ${token}`, 

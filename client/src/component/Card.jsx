@@ -22,7 +22,7 @@ export default function Card({ post }) {
 
         console.log('inside submitLike');
         try {
-            await axios.put('/post/saveLike', { postId, userId }, {
+            await axios.put('http://localhost:8080/post/saveLike', { postId, userId }, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -39,7 +39,7 @@ export default function Card({ post }) {
     const submitUnLike = async () => {
         console.log('inside submitUnLike function');
         try {
-            await axios.put('/post/saveunLike', { postId, userId }, {
+            await axios.put('http://localhost:8080/post/saveunLike', { postId, userId }, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -68,7 +68,7 @@ export default function Card({ post }) {
                         <div className='ml-5 m-auto'>{post.postedBy && post.postedBy.name}</div>
                     </div>
 
-                    <div className='mt-[1%] h-[25rem] bg-black rounded-md '><img className='object-contain h-full p-2 m-auto ' src={post.photo ? post.photo : "https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg"} alt="" /> </div>
+                    <div className='mt-[1%] h-[25rem] bg-black rounded-md '><img className='object-contain h-full  m-auto ' src={post.photo ? post.photo : "https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg"} alt="" /> </div>
 
                     <div className='flex flex-col '>
 

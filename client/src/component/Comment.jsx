@@ -30,7 +30,7 @@ console.log(name+" "+photo);
     try {
       console.log('inside handle comment');
       const response = await axios.post(
-        '/post/addComment',
+        'http://localhost:8080/post/addComment',
         { comment, postId },
         {
           headers: {
@@ -58,7 +58,7 @@ console.log(name+" "+photo);
 
   const fetchCommentData = async (id) => {
     try {
-      const response = await axios.get(`/post/commentData/${id}`, {
+      const response = await axios.get(`http://localhost:8080/post/commentData/${id}`, {
         headers: {
           Authorization: 'Bearer ' + token
         }

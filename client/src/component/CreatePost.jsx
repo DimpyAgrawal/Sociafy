@@ -49,7 +49,7 @@
         }
         const token = localStorage.getItem('token');
         const response = await axios.post
-        ('/post/posts',
+        ('http://localhost:8080/post/posts',
           {
             body: body,
             image: imageUrl

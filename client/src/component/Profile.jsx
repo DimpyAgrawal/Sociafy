@@ -24,7 +24,7 @@ export default function Profile() {
   const fetchProfileData = async (id) => {
     try {
       // console.log(token);
-      const response = await axios.get(`/getProfileData/${id}`, {
+      const response = await axios.get(`http://localhost:8080/getProfileData/${id}`, {
         headers: {
           authorization: `Bearer ${token}`
         }
@@ -45,7 +45,7 @@ export default function Profile() {
 
   const fetchProfilePost = async (id) => {
     try {
-      const response = await axios.get(`/post/posts/${id}`, {
+      const response = await axios.get(`http://localhost:8080/post/posts/${id}`, {
         headers: {
           Authorization: 'Bearer ' + localStorage.getItem('token')
         }
@@ -72,7 +72,7 @@ export default function Profile() {
     console.log(userData._id);
 
     try {
-      const res = await axios.put('/saveFollowers', { userId: userData._id }, {
+      const res = await axios.put('http://localhost:8080/saveFollowers', { userId: userData._id }, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -90,7 +90,7 @@ export default function Profile() {
     e.preventDefault();
     console.log('inside submitUnlike function');
     try {
-      const res = await axios.put('/saveunFollowers', { userId: userData._id }, {
+      const res = await axios.put('http://localhost:8080/saveunFollowers', { userId: userData._id }, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + localStorage.getItem('token')
