@@ -9,12 +9,14 @@ import CreatePost from './component/CreatePost'
 
 import { ToastContainer } from 'react-toastify'
 export default function App() {
+  const data  = localStorage.getItem('token') || null;
   return (
     <>
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route exact path='/' element={<Home />} />
+          <Route exact path='/' element={data?<Home />:<SignIn/>} />
+
           <Route exact path='/signin' element={<SignIn />} />
           <Route exact path='/signup' element={<SignUp />} />
           <Route exact path='/profile' element={<Profile />} />

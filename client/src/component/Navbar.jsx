@@ -21,7 +21,7 @@ export default function Navbar() {
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/profile'>Profile</NavLink>
             <NavLink to='/createPost'>CreatePost</NavLink>
-            <div onClick={() => { localStorage.clear(); navigate('/signin'); }}>Logout</div>
+            <div  className='cursor-pointer' onClick={() => { localStorage.clear(); navigate('/signin'); }}>Logout</div>
             </>
           ) : (
             <>

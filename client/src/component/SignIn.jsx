@@ -35,6 +35,7 @@ export default function SignIn() {
       localStorage.setItem('loggedin',true);
       notify1();
       navigate('/');
+      location.reload();
 
       console.log('login');
     }).catch(error=>{
