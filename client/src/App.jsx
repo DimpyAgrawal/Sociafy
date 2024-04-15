@@ -4,7 +4,7 @@ import SignIn from './component/SignIn'
 import SignUp from './component/SignUp'
 import Home from './component/Home'
 import Navbar from './component/Navbar';
-import Profile from './component/profile';
+import Profile from './component/Profile';
 import CreatePost from './component/CreatePost'
 
 import { ToastContainer } from 'react-toastify'
