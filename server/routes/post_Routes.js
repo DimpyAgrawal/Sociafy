@@ -28,6 +28,7 @@ router.post('/posts', authenticate, async(req,res)=>{
 })
 
 router.get('/allposts',authenticate, async (req, res) => {
+    console.log("all post");
     try {
         const posts = await Post.find().populate('postedBy').exec();
         console.log(posts);
